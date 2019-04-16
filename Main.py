@@ -15,21 +15,27 @@ def printTweet(descr, t):
 	print("Mentions: %s" % t.mentions)
 	print("Hashtags: %s\n" % t.hashtags)
 
-handles = ['NYTimes', 
+handles = [ 'NYTimes', 
             'NBCNews',
-            'ProPublica',
-            'FoxNews',
             'CBSNews',
             'Newsweek',
             'WashingtonPost',
             'Buzzfeed',
             'HuffPost',
-            'BreitbartNews',
             'CNN',
-            'BBC',
+           
+            'BBCWorld',
+            'ProPublica',
             'AP',
             'WSJ',
-            'NPR',]
+            'NPR',
+            
+            'DailyMail',
+            'NRO',
+            'OANN',
+            'BreitbartNews',
+            'blazemedia',
+            'FoxNews',]
 tweets = []
 for user in handles:
     tweetCriteria = got.manager.TweetCriteria().setQuerySearch('correction: from:' + user).setSince("2015-01-01")#.setMaxTweets(10)
